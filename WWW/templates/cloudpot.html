@@ -1,0 +1,67 @@
+<!-- this is the showing part, put GUI to user, controled by cloudpot.py -->
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>smart pot</title>
+<style type="text/css">
+}
+
+body {
+	background-color: #09F;
+}
+</style>
+  </head><body bgcolor="#00FFFF">
+  <font face="Verdana, Geneva, sans-serif"></font>
+  <div>
+  <span style="position: absolute; top: 25px; left: 25px;">
+    <img src="http://192.168.1.122/templates/pot.png" width="250" height="250" />
+  </span>
+  <span style="position: absolute; top: 25px; left: 275px;">
+    <img src="http://192.168.1.122/templates/light.png" width="250" height="250" />
+  </span>
+  <span style="position: absolute; top: 275px; left: 25px;">
+    <img src="http://192.168.1.122/templates/temp.png" width="250" height="250" />
+  </span>
+  <span style="position: absolute; top: 275px; left: 275px;">
+    <img src="http://192.168.1.122/templates/wet.png" width="250" height="250" />
+  </span>
+    
+  <h1>
+    <span style="position: absolute; top: 30px; left: 30px; font-size: 36px;">My flower pot</span>
+    <span style="position: absolute; top: 30px; left: 281px; font-size: 36px;">light</span>
+    <span style="position: absolute; top: 276px; left: 27px; width: 180px; height: 44px; font-size: 36px;">tempareture</span>
+    <span style="position: absolute; top: 281px; left: 280px; font-size: 36px;"> wet</span>
+  </h1>
+</div>
+
+    <a href="" style="position: absolute; top: 138px; left: 751px; width: 260px; height: 196px;">
+      <img src="http://192.168.1.122/templates/logo.png" width="404" height="255" />
+    </a>
+
+
+<!-- show data -->
+  <p>
+    <span style="position: absolute; top: 126px; left: 384px; width: 107px; height: 149px; border-left-width: inherit; font-size: 128px;">{{light}}</span>
+  <p>
+    <span style="position: absolute; top: 375px; left: 138px; width: 107px; height: 149px; border-left-width: inherit; font-size: 128px;">{{temp}}</span>
+  <p>
+    <span style="position: absolute; top: 376px; left: 388px; width: 107px; height: 149px; border-left-width: inherit; font-size: 128px;">{{water}}</span>
+    <!-- end show -->
+
+
+
+  <a href="" style="position: absolute; top: 25px; left: 550px;">
+    <img src="http://192.168.1.122/templates/refresh.png" width="125" height="125" />
+  </a>
+  <!-- water state -->
+  {% if state == "1" %}
+    <a href="/s" style="position: absolute; top: 150px; left: 550px;"><img src="http://192.168.1.122/templates/water.png" width="125" height="125" /></a>
+  {% else %}
+    <a href="/p" style="position: absolute; top: 150px; left: 550px;"><img src="http://192.168.1.122/templates/notwatering.png" width="125" height="125" /></a>
+  {% endif %}
+  <!-- end state -->
+  <span style="position: absolute; top: 275px; left: 550px;"><img src="http://192.168.1.122/templates/help.png" width="125" height="125" /></span>
+  <span style="position: absolute; top: 400px; left: 550px;"><img src="http://192.168.1.122/templates/power.png" width="125" height="125" /></span>
+
