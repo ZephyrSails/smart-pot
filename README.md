@@ -16,3 +16,5 @@ this system coulde achieve controling and monitoring of ardunio, from PI.
 
 core tecthnology comming from flask
 guide about flask: http://ju.outofmemory.cn/entry/56352
+
+post and mostly made by ZephyrSails
